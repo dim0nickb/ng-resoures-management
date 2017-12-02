@@ -1,0 +1,12 @@
+<div class="flex-container">
+  <div class="padding-5 margin-1 flex-item-1 center-text"></div>
+  <div class="flex-item-3 timeline center-text flex-container-vert"
+    *ngFor="let day of this.days; let day_idx = index;">
+      <div *ngFor="let hour of this.getHours(day_idx); let hour_idx = index "
+        class="flex-item-1 hour"
+        [style.backgroundColor]="this.getDivColor(day_idx, hour_idx)">
+        {{ this.time }}
+      </div>
+  </div>
+  <div class="padding-5 margin-1 flex-item-1 center-text"></div>
+</div>

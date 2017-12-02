@@ -1,0 +1,89 @@
+.resource { border: 1px solid #aaa; padding: 5px;  margin: 1px;}
+.resource:hover {
+    background-color: #ccc;
+    cursor: pointer;
+}
+.timeline { border: 1px solid #aaa; padding: 5px;  margin: 1px;}
+.timeline:hover {
+    border: 1px solid #000;
+    cursor: pointer;
+}
+.hoverable { border: 1px solid #aaa; padding: 5px;  margin: 1px; }
+.hoverable:hover {
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+.header { border: 1px solid #aaa; padding: 5px;  margin: 1px;}
+.round-corners { border-radius: 3px; }
+.container { border: 1px solid #000;}
+.flex-container { 
+    display:flex; 
+    flex-wrap: nowrap;
+    align-items: center;
+}
+.flex-item-1 { flex: 1; }
+.flex-item-2 { flex: 2; }
+.flex-item-3 { flex: 3; }
+.flex-item-4 { flex: 4; }
+.flex-item-5 { flex: 5; }
+.padding-5 {padding: 5px;}
+.margin-1 {margin: 1px;}
+.border {
+    border: 1px solid #000;
+}
+.bottom-border {
+    border-style: none;
+    border-bottom: 1px solid #aaa;
+}
+.no-border {
+    border-style: none;
+}
+.min-300{
+    min-width: 550px;
+}
+.max-1000{
+    max-width: 1000px;
+}
+.center{
+    margin: 0 auto;
+}
+.unselectable{
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+.center-text{
+    text-align: center;
+}
+.bold-text{
+    font-style: bold;
+}
+input{
+    width: 75%;
+}
+.cursorable {
+    cursor: pointer;
+}
+.shadow {
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.right {
+    align-content: rigth;
+    align-items: right;
+    text-align: right;
+}
+.margin-left-10 {
+    margin-left: 10px;
+}
+.padding-left-10 {
+    margin-left: 10px;
+}
+.inline {
+    display: inline-block;
+}
+
+.hour { border: 1px solid #aaa; margin-bottom: 5px;}
+.hour:hover {
+    border: 1px solid #000;
+    cursor: pointer;
+}
