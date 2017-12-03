@@ -1,50 +1,59 @@
 {
-  "name": "resouce-managing-app",
-  "version": "0.0.0",
-  "license": "MIT",
-  "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
-  },
-  "private": true,
-  "dependencies": {
-    "@angular/animations": "^5.0.0",
-    "@angular/common": "^5.0.0",
-    "@angular/compiler": "^5.0.0",
-    "@angular/core": "^5.0.0",
-    "@angular/forms": "^5.0.0",
-    "@angular/http": "^5.0.0",
-    "@angular/platform-browser": "^5.0.0",
-    "@angular/platform-browser-dynamic": "^5.0.0",
-    "@angular/router": "^5.0.0",
-    "core-js": "^2.4.1",
-    "rxjs": "^5.5.2",
-    "zone.js": "^0.8.14"
-  },
-  "devDependencies": {
-    "@angular/cli": "1.5.5",
-    "@angular/compiler-cli": "^5.0.0",
-    "@angular/language-service": "^5.0.0",
-    "@types/jasmine": "~2.5.53",
-    "@types/jasminewd2": "~2.0.2",
-    "@types/node": "~6.0.60",
-    "codelyzer": "^4.0.1",
-    "jasmine-core": "~2.6.2",
-    "jasmine-spec-reporter": "~4.1.0",
-    "karma": "~1.7.0",
-    "karma-chrome-launcher": "~2.1.1",
-    "karma-cli": "~1.0.1",
-    "karma-coverage-istanbul-reporter": "^1.2.1",
-    "karma-jasmine": "~1.1.0",
-    "karma-jasmine-html-reporter": "^0.2.2",
-    "material-design-icons": "^3.0.1",
-    "protractor": "~5.1.2",
-    "ts-node": "~3.2.0",
-    "tslint": "~5.7.0",
-    "typescript": "~2.4.2"
-  }
+    "name": "ng-resoures-management",
+    "version": "1.0.19",
+    "description": "ng-resoures-management",
+    "main": "ng-resoures-management.umd.js",
+    "jsnext:main": "ng-resoures-management.esm.js",
+    "module": "ng-resoures-management-source.js",
+    "types": "ng-resoures-management-source.d.ts",
+    "typings": "ng-resoures-management-source.d.ts",
+    "scripts": {
+        "copy": "node tools/copy-package.js && node tools/cleanup-package.js",
+        "bundle": "rollup -c rollup.config.umd.js",
+        "removecode": "node tools/removecode.js",
+        "build": "rimraf dist && npm run bundle && npm run copy && npm run gulp-inline-templates && npm run ngc-es && npm run removecode",
+        "ngc-es": "ngc -p tsconfig-es.json",
+        "publish": "cd ./dist && npm publish",
+        "npm-link": "cd ./dist && npm link",
+        "gulp-inline-templates": "rimraf tmp && gulp inline-templates"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/dim0nickb/ng-resoures-management.git"
+    },
+    "keywords": [
+        "resoures-management"
+    ],
+    "author": "basstorniloo@gmail.com",
+    "license": "ISC",
+    "dependencies": {
+        "@angular/common": "^5.0.2",
+        "@angular/compiler": "^5.0.2",
+        "@angular/forms": "^5.0.2",
+        "@angular/core": "^5.0.2",
+        "@angular/platform-browser": "^5.0.2",
+        "rxjs": "^5.5.2",
+        "zone.js": "^0.8.17",
+        "material-design-icons": "^3.0.1"
+    },
+    "devDependencies": {
+        "@angular/compiler-cli": "^5.0.2",
+        "@types/node": "^8.0.11",
+        "del": "^2.2.2",
+        "gulp": "^3.9.1",
+        "gulp-inline-ng2-template": "^4.0.0",
+        "node-sass": "^4.5.3",
+        "rimraf": "^2.5.4",
+        "rollup": "^0.50.0",
+        "rollup-plugin-angular": "^0.4.4",
+        "rollup-plugin-commonjs": "^8.2.1",
+        "rollup-plugin-node-resolve": "^3.0.0",
+        "rollup-plugin-typescript": "^0.8.1",
+        "rollup-plugin-uglify": "^2.0.1",
+        "typescript": "2.4.2"
+    },
+    "bugs": {
+        "url": "https://github.com/dim0nickb/ng-resoures-management/issues"
+    },
+    "homepage": "https://github.com/dim0nickb/ng-resoures-management#readme"
 }

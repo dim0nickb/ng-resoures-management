@@ -1,27 +1,25 @@
 {
     "compilerOptions": {
         "target": "es5",
-        "module": "commonjs",
+        "module": "es2015",
         "sourceMap": true,
         "moduleResolution": "node",
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
         "declaration": true,
         "outDir": "./dist",
-        "lib": [
-            "es2015",
-            "dom"
-        ]
+        "lib": ["es2015", "dom"]
     },
-    "files": [
-        "./lib/ng-resoures-management-source.ts"
-    ],
+
+    "files": ["./tmp/lib-inlined/ng-resoures-management-source.ts"],
+
     "exclude": [
         "node_modules"
     ],
+
     "angularCompilerOptions": {
-        "genDir": "./dist",
-        "skipMetadataEmit": false,
-        "strictMetadataEmit": true
+        "outDir": "./dist",
+        "skipMetadataEmit" : false,
+        "strictMetadataEmit" : true
     }
 }
