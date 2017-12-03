@@ -7,7 +7,7 @@ import { ResourceService } from './resource.service';
 import { SearcResourceService } from './search-resource.service';
 import { Subject } from 'rxjs/Subject';
 import { Observable } from 'rxjs/Observable';
-import { ResourceTimelineDailyComponent } from './resource-timeline-daily.component'
+import { ResourceTimelineDailyComponent } from './resource-timeline-daily.component';
 
 @Component({
   selector: 'resource-manager',
