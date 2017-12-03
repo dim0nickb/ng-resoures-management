@@ -5,7 +5,6 @@ import { AppComponent } from './app.component';
 import { ResourceManagerComponent } from './resource-manager/resource-manager.component';
 import { ResourceComponent } from './resource-manager/resource.component';
 import { TimelineComponent } from './resource-manager/timeline.component';
-import { PeriodService } from './resource-manager/period.service';
 import { ResourcesComponent } from './resource-manager/resources.component';
 import { ResourceTimelineComponent } from './resource-manager/resource-timeline.component';
 
