@@ -37,7 +37,8 @@ export class ResourceTimelineDailyComponent implements OnInit {
   }
 
   getDivColor(day: number, hour: number) {
-    const usage = this.resource.getUsage(this.periodService.getOffsetDate(day));
+    const day_ = this.periodService.getOffsetDate(day);
+    const usage = this.resource.getUsage(day_);
     this.usage = usage;
     this.time = this.hours[hour];
     //const value = usage > 50 ? 150 : 255;
@@ -47,7 +48,9 @@ export class ResourceTimelineDailyComponent implements OnInit {
     if ( usage >= 50 ) {
       color = '#402E34';
     }
-
+    if (day_.getDay()==0 || day_.getDay()==6){
+      color = `#9EB1A7`;
+    }
     return color;
   }
 
