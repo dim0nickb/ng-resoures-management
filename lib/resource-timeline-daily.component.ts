@@ -40,8 +40,14 @@ export class ResourceTimelineDailyComponent implements OnInit {
     const usage = this.resource.getUsage(this.periodService.getOffsetDate(day));
     this.usage = usage;
     this.time = this.hours[hour];
-    const value = usage > 50 ? 150 : 255;
-    const color = `rgb(${value},${value},${value})`;
+    //const value = usage > 50 ? 150 : 255;
+    //const color = `rgb(${value},${value},${value})`;
+
+    let color = '#FFF';
+    if ( usage >= 50 ) {
+      color = '#402E34';
+    }
+
     return color;
   }
 
