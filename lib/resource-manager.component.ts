@@ -18,7 +18,7 @@ import { ResourceTimelineDailyComponent } from './resource-timeline-daily.compon
         <div class="flex-item-1 padding-5 margin-1">
             <input type="text"
               class="inline bottom-border"
-              placeholder="поиск:"
+              placeholder="поиск"
               [value]="search"
               (input)="changeSearch($event)"
               (click)="clearSearch()" />

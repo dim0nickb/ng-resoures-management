@@ -37,8 +37,20 @@ export class ResourceTimelineComponent implements OnInit {
     const usage = this.resource.getUsage(this.periodService.getOffsetDate(idx));
     this.usage = usage;
     const value = 255 - Math.floor((255 / 100 * usage - 1) / 2);
-    const color = `rgb(${value},${value},${value})`;
+    //const color = `rgb(${value},${value},${value})`;
     //console.log(`index: ${idx}, usage: ${usage}, color: ${color}`);
+    /*
+    красный - занят FF7676
+    серый - выходной 9EB1A7
+    оранжевый - больше 50% занятости FFC173
+    желтый - частично занят FFFC8D
+    зеленый - свободный 9BFF97
+    /**/
+    let color = `rgb(${value},${value},${value})`;
+    if (usage >= 75) {color = '#FF7676';}
+    else if (usage >= 50) {color = '#FFC173';}
+    else if (usage >= 25) {color = '#FFFC8D';}
+    else {color = '#9BFF97';}
     return color;
   }
 }
